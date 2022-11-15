@@ -12,15 +12,14 @@ import { Routes } from 'react-router'
 
 function App() {
   return (
-    <div>
-      <span>Kuchen App</span>
-      <Switch>
-        <Route exact path='/' component={NewOrder} />
-        <Route path='/new-order' component={NewOrder} />
-        <Route path='/orders' component={Orders} />
-        <Route path='/product-state' component={ProductsMgmt} />
-      </Switch>
-    </div>
+      <Provider store={store}>
+        <Routes>
+          <Route path='new-order' element={<NewOrder/>} />
+          <Route path='orders' element={<Orders/>} />
+          <Route path='/product-state' element={<ProductsMgmt/>} />
+          <Route exact path='/' element={<Orders/>} />
+        </Routes>
+      </Provider>
   )
 }
 

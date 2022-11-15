@@ -4,7 +4,7 @@ import MainTemplate from '../template/MainTemplate'
 import Button from '../components/atoms/Button'
 import { useDispatch, useSelector } from 'react-redux'
 import { authenticate, signup } from '../_actions/loginActions'
-import { Redirect } from 'react-router-dom'
+import { redirect, Redirect } from 'react-router-dom'
 import OrderHeading from '../components/molecules/OrderHeading'
 import { loginData } from '../data/loginJson'
 
@@ -156,7 +156,7 @@ const LoginPage = () => {
             <p>Kitchen Display System</p>
             <span>{`${isAuth}`}</span>
           </StyledWelcome>
-          {isAuth || isRegistrySuccessful ? <Redirect to='/orders' /> : ''}
+          {isAuth || isRegistrySuccessful ? redirect('/orders') : ''}
           <StyledForm>
             {isLogin ? (
               ''

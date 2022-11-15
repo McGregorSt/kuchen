@@ -9,14 +9,14 @@ import { store } from './store/store'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <BrowserRouter >
       {/* <HashRouter basemname={`/`}> */}
-      {/* <BrowserRouter basemname={`/${process.env.PUBLIC_URL}`}> */}
+    {/* <Provider store={store}> */}
+        <App />
+    {/* </Provider> */}
       {/* </HashRouter> */}
-    </Provider>
+      {/* <BrowserRouter basemname={`/${process.env.PUBLIC_URL}`}> */}
+      </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 )
