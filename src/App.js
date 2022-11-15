@@ -13,7 +13,7 @@ import { Routes } from 'react-router'
 function App() {
   return (
     <Switch>
-      <Route exact path='/' component={Orders} />
+      <Route exact path='/' component={NewOrder} />
       <Route path='/new-order' component={NewOrder} />
       <Route path='/orders' component={Orders} />
       <Route path='/product-state' component={ProductsMgmt} />
