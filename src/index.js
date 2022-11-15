@@ -10,10 +10,12 @@ import { store } from './store/store'
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <HashRouter basemname={`/`}>
-      {/* <BrowserRouter basemname={`/${process.env.PUBLIC_URL}`}> */}
+      <BrowserRouter>
         <App />
-      </HashRouter>
+      </BrowserRouter>
+      {/* <HashRouter basemname={`/`}> */}
+      {/* <BrowserRouter basemname={`/${process.env.PUBLIC_URL}`}> */}
+      {/* </HashRouter> */}
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
